@@ -1,0 +1,45 @@
+div#container
+{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: auto;
+    text-align: center;
+
+    border: 1px solid red;
+
+    margin: 1%;
+
+}
+
+/*---MAIN HEADING---*/
+header#main-header
+{
+    vertical-align: middle;
+    border: 1px solid black;
+
+    grid-column: 1 / span 3;
+    
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto;
+
+}
+
+/*Main Heading (Nested Grid)*/
+header#main-header div
+{
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+nav#nav-bar 
+{
+    grid-column: 1 / span 3;
+    border: 1px solid black;
+}
+
+nav#nav-bar li
+{
+    list-style-type: none;
+    display: inline-block;
+}
