@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Sign</title>
+        <link rel = "StyleSheet" href = "styles_signin.css">
+
+        <script src = "Scripts.js" defer></script>
+    </head>
+    <body>
+        <div id = container>
+
+            <fieldset>
+                <legend>Create</legend>
+                <form method = "post" enctype="text/plain"> 
+                
+                    <h1></h1>
+
+                    <h3>Username</h3>
+                    <div id = "username-container">
+                        <label for = "username"><input id = "sign-username" type = "text" placeholder = "JohnDoe" maxlength="30"></label>
+                    </div>
+
+                    <h3>Email</h3>
+                    <div id = "email-container">
+                        <label for = "email"><input id = "sign-email" type = "email" placeholder="JohnDoe@gmail.com"></label>
+                    </div>
+
+                    <h3>Password</h3>
+                    <div id = "password-container">
+                        <label for = "password"><input id = "sign-password" type = "password"></label>
+                    </div>
+
+                    <div id = "submit-container">
+                        <input id = "submit" type = "submit" value = "Confirm" onclick="submitUser()">
+                        <input id = "reset" type = "reset" value = "Reset">
+                    </div>
+                </form>
+            </fieldset>
+
+            <h3>Dont have an account</h3>
+            <h4>Create one now</h4>
+            <div>
+                <button onclick = "accountPage()">Click me</button>
+            </div>
+
+        </div>
+    </body>
+</html>

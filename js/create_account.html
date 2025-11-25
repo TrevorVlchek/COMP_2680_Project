@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Create</title>
+        <link rel = "StyleSheet" href = "styles_signin.css">
+
+        <script src = "Scripts.js" defer></script>
+    </head>
+    <body>
+        <div id = container>
+
+            <fieldset>
+                <legend>Create</legend>
+                <form method = "post" enctype="text/plain" onsubmit="createAccount()"> 
+
+                    <h3>Username</h3>
+                    <div id = "username-container">
+                        <label for = "username"><input id = "create-username" type = "text" value = "" maxlength="30"></label>
+                    </div>
+
+                    <h3>Email</h3>
+                    <div id = "email-container">
+                        <label for = "email"><input id = "create-email" type = "email"></label>
+                    </div>
+
+                    <h3>Password</h3>
+                    <div id = "password-container">
+                        <label for = "password"><input id = "create-password" type = "password"></label>
+                    </div>
+
+                    <h3>Confirm Password</h3>
+                    <div id = "password-container">
+                        <label for = "password-conf"><input id = "conf-password" type = "password"></label>
+                    </div>
+
+                    <div id = "submit-container">
+                        <input id = "create-account" type = "submit" value = "Confirm">
+                        <input id = "reset" type = "reset" value = "Reset">
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </body>
+</html>
