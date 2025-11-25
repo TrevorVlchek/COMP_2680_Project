@@ -1,7 +1,6 @@
 window.onload = function(){
-    displayHeader();
-    displayFooter();
-};
+//
+}; //anything that needs to be called on load goes here
 
 setInterval(function(){
     document.getElementById('clock').innerHTML = new Date().toLocaleString();
