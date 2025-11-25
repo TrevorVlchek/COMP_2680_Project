@@ -3,92 +3,169 @@
     <head>
         <title>League Radar</title>
         <link rel = "StyleSheet" href = "css/styles.css">
-
         <script src = "js/Scripts.js" defer></script>
     </head>
     <body>
         <div id = "container">
 
             <!--MAIN HEADING-->
+            <!--Tried to use iframes to make it easier to just insert the header on every page, but couldn't get it working.
+            Scrollbar and sizing issues. Take another crack later?-->
+            <div class="account"><a href="#sign_up">Sign up</a> // <a href="#login">Log In</a></div>
             <header id = "main-header">
-                <div class = "header_img"><img src = "images/header_hockey.png" alt = "No Image Found"></div> <!--Could use picture as well-->
-                <div class = "header_img"><img src = "images/header_soccer.png" alt = "No Image Found"></div>
                 <div id = "header-title">
                     <h1>League Radar</h1>
-                    <p>Never Miss a Game</p></div>
-                <div class = "header_img"><img src = "images/header_football.png" alt = "No Image Found"></div>
-                <div class = "header_img"><img src = "images/header_volleyball.png" alt = "No Image Found"></div>
-                
-            </header>
-            
-            <!--NAVIGATION BAR-->
-            <nav id = "nav-bar">
-                <ul>
-                    <li><a href = "sports/hockey.html">Hockey</a> </li>
-                    <li><a href = "sports/soccer.html">Soccer</a> </li>
-                    <li><a href = "sports/football.html">Football</a> </li>
-                </ul>
+                    <p>Never Miss a Game | Track any sport, anywhere, anytime</p>
+                </div>
+                <!--NAVIGATION BAR-->
+            <nav id = "nav-bar" class="navbar">
+                <div class="dropdown" id="nav_hockey">
+                    <button class="dropbtn" id="btn_hockey">
+                        HOCKEY
+                    </button>
+                    <div class="dropdown_menu" id="dropdown_hockey">
+                        <a href="sports/hockey.html">GAMES</a>
+                        <a href="#">TEAMS</a> <!--No need to actually make pages for this.
+                            The dropdown menus are just here to demonstrate our design skills-->
+                    </div>
+                </div>
+                <div class="dropdown" id="nav_soccer">
+                    <button class="dropbtn" id="btn_soccer">
+                        SOCCER
+                    </button>
+                    <div class="dropdown_menu" id="dropdown_soccer">
+                        <a href="sports/soccer.html">GAMES</a>
+                        <a href="#placeholder">TEAMS</a>
+                    </div>
+                </div>
+                <div class="dropdown" id="nav_football">
+                    <button class="dropbtn" id="btn_football">
+                        FOOTBALL
+                    </button>
+                    <div class="dropdown_menu" id="dropdown_football">
+                        <a href="sports/football.html">GAMES</a>
+                        <a href="#placeholder">TEAMS</a>
+                    </div>
+                </div> 
             </nav>
+            </header>
 
-            <!--NEWS ARTICLES SECTION-->
+            <!--Left side: timer, ongoing games-->
 
-            <!--Article 1-->
-            <div id = "articles-1">
-                <h3>Article 1</h3>
-                <br>
-                <br>
-                <br>
-                <h3>End Article</h3>
+            <div class="games_container">
+                <h2>HAPPENING NOW!</h2>
+                <div id="clock"></div>
+                <p>Want to keep up with every game happening right now, worldwide? Look no further!</p>
+
+                <div class="ongoing_games content_card">
+                    <h3>TEAM 1 VS TEAM 2</h3>
+                    <p>CURRENT SCORE: X-X</p>
+                    <p>[Current phase of game, EG inning, period]</p>
+                </div>
+                <div class="ongoing_games content_card">
+                    <h3>TEAM 1 VS TEAM 2</h3>
+                    <p>CURRENT SCORE: X-X</p>
+                    <p>[Current phase of game, EG inning, period]</p>
+                </div> 
+                <div class="ongoing_games content_card">
+                    <h3>TEAM 1 VS TEAM 2</h3>
+                    <p>CURRENT SCORE: X-X</p>
+                    <p>[Current phase of game, EG inning, period]</p>
+                </div> 
+                <div class="ongoing_games content_card">
+                    <h3>TEAM 1 VS TEAM 2</h3>
+                    <p>CURRENT SCORE: X-X</p>
+                    <p>[Current phase of game, EG inning, period]</p>
+                </div> 
+                <div class="ongoing_games content_card">
+                    <h3>TEAM 1 VS TEAM 2</h3>
+                    <p>CURRENT SCORE: X-X</p>
+                    <p>[Current phase of game, EG inning, period]</p>
+                </div> 
+                <div class="ongoing_games content_card">
+                    <h3>TEAM 1 VS TEAM 2</h3>
+                    <p>CURRENT SCORE: X-X</p>
+                    <p>[Current phase of game, EG inning, period]</p>
+                </div>
+                <div class="ongoing_games content_card">
+                    <h3>TEAM 1 VS TEAM 2</h3>
+                    <p>CURRENT SCORE: X-X</p>
+                    <p>[Current phase of game, EG inning, period]</p>
+                </div>   
+                <div class="ongoing_games content_card">
+                    <h3>TEAM 1 VS TEAM 2</h3>
+                    <p>CURRENT SCORE: X-X</p>
+                    <p>[Current phase of game, EG inning, period]</p>
+                </div>   
+                <div class="ongoing_games content_card">
+                    <h3>TEAM 1 VS TEAM 2</h3>
+                    <p>CURRENT SCORE: X-X</p>
+                    <p>[Current phase of game, EG inning, period]</p>
+                </div>           
             </div>
 
-            <!--Article 2-->
-            <div id = "articles-2">
-                <h3>Article 1</h3>
-                <br>
-                <br>
-                <br>
-                <h3>End Article</h3>
-            </div>
+            <!--right side: recent news, game results-->
+            <div class="articles_container">
+                <H2 id="article_heading">WHAT'S NEW?</H2>
+                <!--Article 1-->
+                <div class="article content_card" id = "articles-1">
+                    <h3>Article 1</h3>
+                    <br>
+                    <br>
+                    <br>
+                    <h3>End Article</h3>
+                </div>
 
-            <!--Article 3-->
-            <div id = "articles-2">
-                <h3>Article 1</h3>
-                <br>
-                <br>
-                <br>
-                <h3>End Article</h3>
+                <!--Article 2-->
+                <div class="article content_card" id = "articles-2">
+                    <h3>Article 1</h3>
+                    <br>
+                    <br>
+                    <br>
+                    <h3>End Article</h3>
+                </div>
+
+                <!--Article 3-->
+                <div class="article content_card" id = "articles-2">
+                    <h3>Article 1</h3>
+                    <br>
+                    <br>
+                    <br>
+                    <h3>End Article</h3>
+                </div>
             </div>
 
             <div id = "footer-section">
                 <!--FOOTER CONTACT SECTION-->
                 <footer id = "contact-footer">
-                    <div>
-                        <h3>Phone</h3>
+                    <div id="footer_tel content_card">
+                        <h3><a href="tel:+15555555555">+1 (555) 555-5555</a></h3>
                     </div>
 
-                    <div>
-                        <h3>Email</h3>
+                    <div id="footer_mail content_card">
+                        <h3><a href="mailto: placeholder@email.com">placeholder@email.com</a></h3>
                     </div>
                     
-                    <div>
-                        <h3>Location</h3>
+                    <div id="footer_address content_card">
+                        <h3>Unit 1234, 567 Rue Le Jour, Kamloops, British Columbia, Canada</h3>
                     </div>
                 </footer>
 
                 <!--FOOTER INFO SECTION-->
                 <!--Information links such as copyright, and version, privacy-->
                 <footer id = "info-footer">
-                    <div id = "copyright">
-                        <h3>Copyright</h3>
+                    <div id = "footer_copyright content_card">
+                        <h3>
+                            © Theodore Mulenga, Senanayake Pethmin, Gabriel Saito, Trevor Vlchek
+                        </h3>
                     </div>
 
-                    <div id = "privacy">
-                        <h3>Privacy</h3>
+                    <div id = "footer_privacy content_card">
+                        <h3><a href="#PrivacyPolicy">Privacy</a></h3>
                     </div>
-                    <div id = "version">
-                        <h3>Version</h3>
+                    <div id = "footer_version content_card">
+                        <h3>Version 1.0</h3>
                     </div>
-                    
                 </footer>
             </div>
         </div>

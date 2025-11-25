@@ -13,8 +13,8 @@ function updateClock()
 
    clock.innerHTML = date_string + " " + time_string;
 }
-if(web_page.includes("template.html")) //change to index.html for final release
-    updateClock();
+
+    
 
 if(web_page.includes("template.html")) //change to index.html for final release
     setInterval(updateClock, 1000);
@@ -202,3 +202,17 @@ if(web_page.includes("template.html") && check_signed_in === 1)//change to index
 } 
 else if(web_page.includes("template.html") && check_signed_in == 0) //Edge case 
     sign_in.style.visibility = "visible";
+
+
+//
+window.onload = function(){
+    document.getElementById('clock').innerHTML = new Date().toLocaleString();
+
+    if(web_page.includes("template.html")) //change to index.html for final release
+        updateClock();
+}; //anything that needs to be called on load goes here
+
+setInterval(function(){
+    document.getElementById('clock').innerHTML = new Date().toLocaleString();
+}, 1000)
+
