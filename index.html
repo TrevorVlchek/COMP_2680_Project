@@ -3,7 +3,6 @@
     <head>
         <title>League Radar</title>
         <link rel = "StyleSheet" href = "css/styles.css">
-
         <script src = "js/Scripts.js" defer></script>
     </head>
     <body>
@@ -11,24 +10,41 @@
 
             <!--MAIN HEADING-->
             <header id = "main-header">
-                <div class = "header_img"><img src = "images/header_hockey.png" alt = "No Image Found"></div> <!--Could use picture as well-->
-                <div class = "header_img"><img src = "images/header_soccer.png" alt = "No Image Found"></div>
                 <div id = "header-title">
                     <h1>League Radar</h1>
-                    <p>Never Miss a Game</p></div>
-                <div class = "header_img"><img src = "images/header_football.png" alt = "No Image Found"></div>
-                <div class = "header_img"><img src = "images/header_volleyball.png" alt = "No Image Found"></div>
-                
-            </header>
-            
-            <!--NAVIGATION BAR-->
+                    <p>Never Miss a Game | Track any sport, anywhere, anytime</p>
+                </div>
+                <!--NAVIGATION BAR-->
             <nav id = "nav-bar">
-                <ul>
-                    <li><a href = "sports/hockey.html">Hockey</a> </li>
-                    <li><a href = "sports/soccer.html">Soccer</a> </li>
-                    <li><a href = "sports/football.html">Football</a> </li>
-                </ul>
+                    <!--<ul>
+                        <li><a href = "sports/hockey.html">Hockey</a> </li>
+                        <li><a href = "sports/soccer.html">Soccer</a> </li>
+                        <li><a href = "sports/football.html">Football</a> </li>
+                    </ul>!-->
+                    <div class="dropdown" id="nav_hockey">
+                        <button class="dropbtn">Hockey</button>
+                        <div class="dropdown_menu" id="menu_hockey">
+                            <a href="sports/hockey.html">Games</a>
+                            <a href="#HockeyTeams">Teams</a><!--No need to actually make pages for this.
+                            The dropdown menus are just here to demonstrate our design skills-->
+                        </div>
+                    </div>
+                    <div class="dropdown" id="nav_soccer">
+                        <button class="dropbtn">Soccer</button>
+                        <div class="dropdown_menu" id="menu_soccer">
+                            <a href="sports/soccer.html">Games</a>
+                            <a href="#SoccerTeams">Teams</a>
+                        </div>
+                    </div>
+                    <div class="dropdown" id="nav_football">
+                        <button class="dropbtn">Football</button>
+                        <div class="dropdown_menu" id="menu_football">
+                            <a href="sports/football.html">Games</a>
+                            <a href="#FootballTeams">Teams</a>
+                        </div>
+                    </div>
             </nav>
+            </header>
 
             <!--NEWS ARTICLES SECTION-->
 
