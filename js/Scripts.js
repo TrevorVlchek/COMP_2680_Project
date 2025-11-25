@@ -1,5 +1,5 @@
 window.onload = function(){
-//
+    document.getElementById('clock').innerHTML = new Date().toLocaleString();
 }; //anything that needs to be called on load goes here
 
 setInterval(function(){

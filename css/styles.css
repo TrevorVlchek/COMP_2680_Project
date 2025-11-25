@@ -24,9 +24,8 @@ div#container
     background-color: white;
     color: black;
     text-align: right;
-    grid-column: 1 / span 5;
+    grid-column: 1 / span 3;
     margin: 0.2rem;
-    height: 1%;
 }
 
 header h1 {
