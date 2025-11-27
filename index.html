@@ -11,7 +11,13 @@
             <!--MAIN HEADING-->
             <!--Tried to use iframes to make it easier to just insert the header on every page, but couldn't get it working.
             Scrollbar and sizing issues. Take another crack later?-->
-            <div class="account"><a href="#sign_up">Sign up</a> // <a href="#login">Log In</a></div>
+            <!--Added extra p tag for turning it hidden when the user signs in, without some tage the "//" will always be visibile-->
+            <div class="account"><a id = "sign-up" href = "account/create_account.html" target="_blank">Sign up</a> <p style = "display: inline;" id = "seperator">//</p> <a id = "sign-in" href="account/sign_in.html" target = "_blank">Log In</a>  
+                <p style = "display: inline;" id = "username"> </p>
+                <p style = "display: inline;" id = "email"> </p>
+                <button id = "sign-out" onclick="signOut()">Sign Out</button>
+
+            </div>
             <header id = "main-header">
                 <div id = "header-title">
                     <h1>League Radar</h1>
