@@ -2,31 +2,41 @@
 <html lang = "en">
     <head>
         <title>Sign</title>
-        <link rel = "StyleSheet" href = "styles_signin.css">
+        <link rel = "StyleSheet" href = "../css/styles_signin.css">
 
         <script src = "../js/Scripts.js" defer></script>
     </head>
     <body>
         <div id = container>
+            
+            <header id = "main-header">
+                <div id = "header-title">
+                    <h1>League Radar</h1>
+                    <p>Never Miss a Game | Track any sport, anywhere, anytime</p>
+                </div>
+            </header>
 
             <fieldset>
-                <legend>Create</legend>
+                
                 <form method = "post" enctype="text/plain"> 
                 
-                    <h1></h1>
+                    <h1 id = "title">Sign In </h1>
 
-                    <h3>Username</h3>
-                    <div id = "username-container">
+                    
+                    <div id = "field-container">
+                        <h3>Username</h3>
                         <label for = "username"><input id = "sign-username" type = "text" placeholder = "JohnDoe" maxlength="30"></label>
                     </div>
 
-                    <h3>Email</h3>
-                    <div id = "email-container">
+                    
+                    <div id = "field-container">
+                        <h3>Email</h3>
                         <label for = "email"><input id = "sign-email" type = "email" placeholder="JohnDoe@gmail.com"></label>
                     </div>
 
-                    <h3>Password</h3>
-                    <div id = "password-container">
+                    
+                    <div id = "field-container">
+                        <h3>Password</h3>
                         <label for = "password"><input id = "sign-password" type = "password"></label>
                     </div>
 
@@ -35,13 +45,14 @@
                         <input id = "reset" type = "reset" value = "Reset">
                     </div>
                 </form>
+
+                <div id = "create-container">
+                    <h4 style="display: inline;">Dont have an account, Create one now!!</h4>
+                    <a href = "create_account.html" target="_blank">SIGN UP</a>
+                </div>
             </fieldset>
 
-            <h3>Dont have an account</h3>
-            <h4>Create one now</h4>
-            <div>
-                <a href = "create_account.html" target="_blank">Click me
-            </div>
+            
 
         </div>
     </body>

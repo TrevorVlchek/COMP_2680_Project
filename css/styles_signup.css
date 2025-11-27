@@ -1,0 +1,97 @@
+/*MAIN HEADING */
+header h1 {
+    font-size: 3rem;
+    -webkit-text-stroke: 0.1rem black;
+    background-color: rgba(36, 145, 203, 0.5);
+}
+
+header#main-header
+{
+    background-image: url('../images/header_stadiumv2.png');
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    background-color: #212121;
+    border: 3px solid black;
+    border-bottom: 3px solid black;
+    
+    margin-bottom: 0%;
+
+}
+
+header#main-header div
+{
+    border: 2px solid white;
+    padding: 2%;
+}
+
+/*MAIN HEADING (Nested Grid)*/
+div#header-title
+{
+    color: white;
+    text-decoration: underline;
+    font-weight: bolder;
+    text-align: left;
+}
+
+div#header-title p {
+    font-size: 2rem;
+    -webkit-text-stroke: 0.08rem black;
+    background-color: rgba(36, 145, 203, 0.5);
+}
+
+
+div#container
+{
+    display: grid;
+    place-items: center;
+    background-color: blue;
+    min-height: 100vh;
+}
+
+#title
+{
+    text-align: center;
+
+    font-family: 'Courier New', Courier, monospace;
+    
+    text-decoration: underline;
+    text-decoration-color: darkblue;
+}
+
+fieldset
+{   
+    margin-top: 0%;
+
+    border: 5px solid darkblue;
+    border-radius: 20px;
+    width: 50%;
+
+    background-color: whitesmoke;
+}
+
+#field-container
+{
+    margin-left: 5%;
+}
+
+h3
+{
+    margin-bottom: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+#field-container input
+{   
+    margin-bottom: 1%;
+    border: 1px solid darkblue;
+    width: 90%;
+}
+
+#submit-container
+{
+    margin-top: 1%;
+    text-align: center;
+}

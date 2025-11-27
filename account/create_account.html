@@ -2,34 +2,46 @@
 <html lang = "en">
     <head>
         <title>Create</title>
-        <link rel = "StyleSheet" href = "styles_signin.css">
+        <link rel = "StyleSheet" href = "../css/styles_signup.css">
 
         <script src = "../js/Scripts.js" defer></script>
     </head>
     <body>
         <div id = container>
 
+            <!--JUST DELETE HEADER IF WE DECIDE WE DONT LIKE SIGNIN/UP WITH IT-->
+            <header id = "main-header">
+                <div id = "header-title">
+                    <h1>League Radar</h1>
+                    <p>Never Miss a Game | Track any sport, anywhere, anytime</p>
+                </div>
+            </header>
+
             <fieldset>
-                <legend>Create</legend>
                 <form method = "post" enctype="text/plain" onsubmit="createAccount()"> 
 
-                    <h3>Username</h3>
-                    <div id = "username-container">
-                        <label for = "username"><input id = "create-username" type = "text" value = "" maxlength="30"></label>
+                    <h1 id = "title">Sign Up</h1>
+                    
+                    <div id = "field-container">
+                        <h3>Username</h3>
+                        <label for = "username"><input id = "create-username" type = "text" value = "" maxlength="30" placeholder="JohnDoe"></label>
                     </div>
 
-                    <h3>Email</h3>
-                    <div id = "email-container">
-                        <label for = "email"><input id = "create-email" type = "email"></label>
+                    
+                    <div id = "field-container">
+                        <h3>Email</h3>
+                        <label for = "email"><input id = "create-email" type = "email" placeholder="JohnDoe@gmail.com"></label>
                     </div>
 
-                    <h3>Password</h3>
-                    <div id = "password-container">
+                    
+                    <div id = "field-container">
+                        <h3>Password</h3>
                         <label for = "password"><input id = "create-password" type = "password"></label>
                     </div>
 
-                    <h3>Confirm Password</h3>
-                    <div id = "password-container">
+                    
+                    <div id = "field-container">
+                        <h3>Confirm Password</h3>
                         <label for = "password-conf"><input id = "conf-password" type = "password"></label>
                     </div>
 

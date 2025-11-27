@@ -154,14 +154,14 @@ if(web_page.includes("index.html"))
     }
 
     //---Clock--
-    setInterval(updateClock(), 1000);
+    setInterval(updateClock, 1000);
     function updateClock()
     {
-    let date = new Date();
-    let clock = document.getElementById("clock");
+        let date = new Date();
+        let clock = document.getElementById("clock");
 
-    let date_string = date.toLocaleDateString();
-    let time_string = date.toLocaleTimeString();
+        let date_string = date.toLocaleDateString();
+        let time_string = date.toLocaleTimeString();
 
     clock.innerHTML = date_string + " " + time_string;
     }
