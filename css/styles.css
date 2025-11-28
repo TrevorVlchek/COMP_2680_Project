@@ -158,12 +158,18 @@ h2 {
 .games_container {
     grid-column: 1 / span 2;
     border: 0.2rem dashed #212121;
+
+    height: 80vh;
+    overflow: hidden;
 }
 
 .articles_container {
     grid-column: 3 / span 1;
     border: 0.2rem dashed white;
     background-color: #212121;
+    /* Added verticall scroll bar to articles*/
+    height: 80vh;
+    overflow: auto;
 }
 
 .content_card {
@@ -188,6 +194,18 @@ h2 {
     text-shadow: 3px 3px 0 darkblue;
 }
     
+
+.article img
+{
+    
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 0;
+    width: 80%;
+    height: 20vh;
+
+}
 
 /*Footer*/
 #footer-section {
