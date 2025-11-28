@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teams | League Central</title>
+
+    <!-- 🔗 UPDATE this path to match your project CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ===== Site Header / Nav ===== -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <!-- You can replace this with an <img> if you have a logo -->
+                <span class="logo-mark">LC</span>
+                <span class="logo-text">League Central</span>
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="stats.html">Stats</a></li>
+                    <li><a href="teams.html" class="active">Teams</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== Page Hero ===== -->
+    <main>
+        <section class="page-hero hero-teams">
+            <div class="container">
+                <h1 class="page-title">League Teams</h1>
+                <p class="page-subtitle">
+                    Explore every team in the league – rosters, divisions, home arenas and quick stats.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== Filter Bar (visual only, can be made interactive later) ===== -->
+        <section class="teams-filter-bar">
+            <div class="container">
+                <div class="filter-label">Filter by conference:</div>
+                <div class="filter-pill-group">
+                    <button class="filter-pill is-active" type="button">All</button>
+                    <button class="filter-pill" type="button">Northern</button>
+                    <button class="filter-pill" type="button">Southern</button>
+                    <button class="filter-pill" type="button">Eastern</button>
+                    <button class="filter-pill" type="button">Western</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Northern Conference ===== -->
+        <section class="teams-section">
+            <div class="container">
+                <header class="teams-section-header">
+                    <h2 class="section-title">Northern Conference</h2>
+                    <p class="section-subtitle">High tempo, physical teams from the north division.</p>
+                </header>
+
+                <div class="teams-grid">
+                    <!-- Team Card 1 -->
+                    <article class="team-card">
+                        <div class="team-logo-circle team-northwolves">
+                            <!-- Initials or logo image -->
+                            <span>NW</span>
+                        </div>
+                        <h3 class="team-name">North Wolves</h3>
+                        <p class="team-city">Kamloops, BC</p>
+
+                        <div class="team-meta">
+                            <span class="team-division-tag">North Division</span>
+                            <span class="team-record">Record: 18–4–1</span>
+                        </div>
+
+                        <p class="team-blurb">
+                            A fast, aggressive squad known for heavy forechecking and shutting down top lines.
+                        </p>
+
+                        <ul class="team-key-players">
+                            <li><span class="label">Captain:</span> Alex Carter (C)</li>
+                            <li><span class="label">MVP:</span> Jayden Lee (RW)</li>
+                            <li><span class="label">Goalie:</span> Mason Clarke</li>
+                        </ul>
+
+                        <a href="team-northwolves.html" class="btn btn-outline">
+                            View full roster
+                        </a>
+                    </article>
+
+                    <!-- Team Card 2 -->
+                    <article class="team-card">
+                        <div class="team-logo-circle team-icehawks">
+                            <span>IH</span>
+                        </div>
+                        <h3 class="team-name">Ice Hawks</h3>
+                        <p class="team-city">Prince George, BC</p>
+
+                        <div class="team-meta">
+                            <span class="team-division-tag">North Division</span>
+                            <span class="team-record">Record: 15–6–2</span>
+                        </div>
+
+                        <p class="team-blurb">
+                            Elite power play unit with one of the most dangerous blue lines in the league.
+                        </p>
+
+                        <ul class="team-key-players">
+                            <li><span class="label">Captain:</span> Riley Johnson (D)</li>
+                            <li><span class="label">Sniper:</span> Mateo Ruiz (LW)</li>
+                            <li><span class="label">Rookie:</span> Ethan Park</li>
+                        </ul>
+
+                        <a href="team-icehawks.html" class="btn btn-outline">
+                            View full roster
+                        </a>
+                    </article>
+
+                    <!-- Team Card 3 -->
+                    <article class="team-card">
+                        <div class="team-logo-circle team-frostbears">
+                            <span>FB</span>
+                        </div>
+                        <h3 class="team-name">Frost Bears</h3>
+                        <p class="team-city">Kelowna, BC</p>
+
+                        <div class="team-meta">
+                            <span class="team-division-tag">North Division</span>
+                            <span class="team-record">Record: 12–9–3</span>
+                        </div>
+
+                        <p class="team-blurb">
+                            Defensive specialists that grind out low-scoring games and dominate the boards.
+                        </p>
+
+                        <ul class="team-key-players">
+                            <li><span class="label">Captain:</span> Noah Singh (C)</li>
+                            <li><span class="label">Two-way:</span> Liam Howard (C)</li>
+                            <li><span class="label">Enforcer:</span> Cole Miller</li>
+                        </ul>
+
+                        <a href="team-frostbears.html" class="btn btn-outline">
+                            View full roster
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Southern Conference ===== -->
+        <section class="teams-section">
+            <div class="container">
+                <header class="teams-section-header">
+                    <h2 class="section-title">Southern Conference</h2>
+                    <p class="section-subtitle">Speed, skill and high-scoring offences from the south.</p>
+                </header>
+
+                <div class="teams-grid">
+                    <!-- Team Card 4 -->
+                    <article class="team-card">
+                        <div class="team-logo-circle team-sunstorm">
+                            <span>SS</span>
+                        </div>
+                        <h3 class="team-name">Sunstorm</h3>
+                        <p class="team-city">Vancouver, BC</p>
+
+                        <div class="team-meta">
+                            <span class="team-division-tag">South Division</span>
+                            <span class="team-record">Record: 20–3–1</span>
+                        </div>
+
+                        <p class="team-blurb">
+                            Known for explosive offence and high-tempo transition play off the rush.
+                        </p>
+
+                        <ul class="team-key-players">
+                            <li><span class="label">Captain:</span> Lucas Kim (C)</li>
+                            <li><span class="label">Playmaker:</span> Daniel Alvarez (C)</li>
+                            <li><span class="label">Goaltender:</span> Oliver Brooks</li>
+                        </ul>
+
+                        <a href="team-sunstorm.html" class="btn btn-outline">
+                            View full roster
+                        </a>
+                    </article>
+
+                    <!-- Team Card 5 -->
+                    <article class="team-card">
+                        <div class="team-logo-circle team-thunderbolts">
+                            <span>TB</span>
+                        </div>
+                        <h3 class="team-name">Thunderbolts</h3>
+                        <p class="team-city">Surrey, BC</p>
+
+                        <div class="team-meta">
+                            <span class="team-division-tag">South Division</span>
+                            <span class="team-record">Record: 14–8–2</span>
+                        </div>
+
+                        <p class="team-blurb">
+                            Physical forecheckers with a lethal one-timer from the left circle on the power play.
+                        </p>
+
+                        <ul class="team-key-players">
+                            <li><span class="label">Captain:</span> Marcus King (RW)</li>
+                            <li><span class="label">Power forward:</span> Jonah Patel (LW)</li>
+                            <li><span class="label">Shutdown D:</span> Carter Young</li>
+                        </ul>
+
+                        <a href="team-thunderbolts.html" class="btn btn-outline">
+                            View full roster
+                        </a>
+                    </article>
+
+                    <!-- Team Card 6 -->
+                    <article class="team-card">
+                        <div class="team-logo-circle team-coastdragons">
+                            <span>CD</span>
+                        </div>
+                        <h3 class="team-name">Coast Dragons</h3>
+                        <p class="team-city">Richmond, BC</p>
+
+                        <div class="team-meta">
+                            <span class="team-division-tag">South Division</span>
+                            <span class="team-record">Record: 11–10–3</span>
+                        </div>
+
+                        <p class="team-blurb">
+                            Young, high-upside roster that leans on speed, creativity and cross-ice passing.
+                        </p>
+
+                        <ul class="team-key-players">
+                            <li><span class="label">Captain:</span> Adrian Chen (C)</li>
+                            <li><span class="label">Rookie:</span> Tyler Morgan (RW)</li>
+                            <li><span class="label">Offensive D:</span> Leo Schmidt</li>
+                        </ul>
+
+                        <a href="team-coastdragons.html" class="btn btn-outline">
+                            View full roster
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Quick League Stats Strip (optional) ===== -->
+        <section class="league-stats-strip">
+            <div class="container league-stats-grid">
+                <div class="league-stat">
+                    <span class="stat-label">Total Teams</span>
+                    <span class="stat-value">12</span>
+                </div>
+                <div class="league-stat">
+                    <span class="stat-label">Conferences</span>
+                    <span class="stat-value">4</span>
+                </div>
+                <div class="league-stat">
+                    <span class="stat-label">Games Played</span>
+                    <span class="stat-value">156</span>
+                </div>
+                <div class="league-stat">
+                    <span class="stat-label">Avg Goals / Game</span>
+                    <span class="stat-value">5.4</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 League Central &mdash; COMP 2680 Final Project</p>
+        </div>
+    </footer>
+</body>
+</html>

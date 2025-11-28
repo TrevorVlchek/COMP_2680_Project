@@ -1,47 +1,4 @@
 
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Array of Accounts
 var account_array = [];
 
@@ -50,10 +7,10 @@ var web_page = window.location.pathname;
 console.log(web_page); 
 
 /* ---UNCOMMENT IF YOU WANT TO CLEAR ARRAY OF ACCOUNTS ---*/ 
-//localestorage.clear();
+//localstorage.clear();
 
 /*-------SPORTS.HTML SCRIPTS-----*/
-if(web_page.includes("sport")) //TODO: Check if this still works  //change to index.html for final release
+if(web_page.includes("zz")) //TODO: Check if this still works  //change to index.html for final release // ALSO IGNORE FOR RN
 {
     setInterval(checkSchedule, 1000);
     var game_list = document.getElementById("team-schedule");
@@ -295,4 +252,15 @@ if(web_page.includes("create_account.html"))
 }
 
 
+if(web_page.includes("football.html"))
+{
+    window.onload = function()
+    {
+        
+    }
 
+    function openBroncos()
+    {
+        window.open('../teams/broncos.html', "_blank");
+    }
+}

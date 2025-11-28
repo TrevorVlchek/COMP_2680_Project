@@ -1,0 +1,112 @@
+body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(to bottom, #101820 10%, #000000);
+        color: white;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .header {
+        padding: 30px;
+        background: #0a0f14;
+        border-bottom: 3px solid #c60c30;
+    }
+
+    .header img {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        margin: 10px 0 0 0;
+        font-size: 42px;
+        letter-spacing: 2px;
+    }
+
+    h2 {
+        margin-top: 5px;
+        color: #ffccd2;
+        font-weight: 400;
+    }
+
+    .teams-container {
+        width: 95%;
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .teams-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .team {
+        background: #16212b;
+        border-radius: 10px;
+        padding: 12px;
+        transition: 0.3s;
+        border: 2px solid #c60c3044;
+        cursor: pointer;
+    }
+
+    .team:hover {
+        background: #233544;
+        transform: scale(1.05);
+        border-color: #c60c30;
+    }
+
+    .team img {
+        width: 90px;
+        margin-top: 10px;
+    }
+
+    button {
+        margin-top: 30px;
+        padding: 14px 30px;
+        font-size: 20px;
+        background: #c60c30;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        color: white;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #8f0a24;
+        transform: scale(1.05);
+    }
+
+    #result {
+        margin-top: 30px;
+        font-size: 26px;
+        font-weight: bold;
+        padding: 20px;
+        min-height: 40px;
+        transition: 0.3s;
+    }
+
+    .fixture-box {
+        background: #142028;
+        padding: 20px;
+        width: 45%;
+        margin: auto;
+        border-radius: 10px;
+        border: 2px solid #c60c30;
+        box-shadow: 0px 0px 15px rgba(198, 12, 48, 0.5);
+        animation: pop 0.4s ease;
+    }
+
+    .fixture-logo {
+        width: 120px;
+        margin: 10px;
+    }
+
+    @keyframes pop {
+        0% { transform: scale(0.7); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+    }
