@@ -2,52 +2,209 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>NHL</title>
+<title>NHL Teams & Fixtures</title>
 
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(to bottom, #afc9e5 10%, #000000);
+        color: white;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .header {
+        padding: 30px;
+        background: #02121f;
+        border-bottom: 3px solid #1e90ff;
+    }
+
+    .header img {
+        width: 140px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        margin: 10px 0 0 0;
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+
+    h2 {
+        margin-top: 5px;
+        color: #a8d4ff;
+        font-weight: 400;
+    }
+
+    .teams-container {
+        width: 95%;
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .teams-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .team {
+        background: #082e4e;
+        border-radius: 10px;
+        padding: 10px;
+        transition: 0.3s;
+        border: 2px solid #1e90ff44;
+        cursor: pointer;
+    }
+
+    .team:hover {
+        background: #1b436b;
+        transform: scale(1.05);
+        border-color: #1e90ff;
+    }
+
+    .team img {
+        width: 80px;
+        margin-top: 10px;
+    }
+
+    button {
+        margin-top: 30px;
+        padding: 14px 30px;
+        font-size: 20px;
+        background: #1e90ff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        color: white;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #0f6ad8;
+        transform: scale(1.05);
+    }
+
+    #result {
+        margin-top: 30px;
+        font-size: 26px;
+        font-weight: bold;
+        padding: 20px;
+        min-height: 40px;
+        transition: 0.3s;
+    }
+
+    .fixture-box {
+        background: #112941;
+        padding: 20px;
+        width: 45%;
+        margin: auto;
+        border-radius: 10px;
+        border: 2px solid #1e90ff;
+        box-shadow: 0px 0px 15px rgba(30, 144, 255, 0.5);
+        animation: pop 0.4s ease;
+    }
+
+    .fixture-logo {
+        width: 110px;
+        margin: 10px;
+    }
+
+    @keyframes pop {
+        0% { transform: scale(0.7); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+</style>
 </head>
+
 <body>
 
-<h1>NHL Teams</h1>
-<h2> Welcome to the home of Hockey</h2>
-
-<div class="teams">
-    <div class="team">Anaheim Ducks</div>
-    <div class="team">Arizona Coyotes</div>
-    <div class="team">Boston Bruins</div>
-    <div class="team">Buffalo Sabres</div>
-    <div class="team">Calgary Flames</div>
-    <div class="team">Carolina Hurricanes</div>
-    <div class="team">Chicago Blackhawks</div>
-    <div class="team">Colorado Avalanche</div>
-    <div class="team">Columbus Blue Jackets</div>
-    <div class="team">Dallas Stars</div>
-    <div class="team">Detroit Red Wings</div>
-    <div class="team">Edmonton Oilers</div>
-    <div class="team">Florida Panthers</div>
-    <div class="team">Los Angeles Kings</div>
-    <div class="team">Minnesota Wild</div>
-    <div class="team">Montreal Canadiens</div>
-    <div class="team">Nashville Predators</div>
-    <div class="team">New Jersey Devils</div>
-    <div class="team">New York Islanders</div>
-    <div class="team">New York Rangers</div>
-    <div class="team">Ottawa Senators</div>
-    <div class="team">Philadelphia Flyers</div>
-    <div class="team">Pittsburgh Penguins</div>
-    <div class="team">San Jose Sharks</div>
-    <div class="team">Seattle Kraken</div>
-    <div class="team">St. Louis Blues</div>
-    <div class="team">Tampa Bay Lightning</div>
-    <div class="team">Toronto Maple Leafs</div>
-    <div class="team">Vancouver Canucks</div>
-    <div class="team">Vegas Golden Knights</div>
-    <div class="team">Washington Capitals</div>
-    <div class="team">Winnipeg Jets</div>
+<!-- HEADER -->
+<div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/05_NHL_Shield.svg" alt="NHL Logo">
+    <h1>NHL Teams</h1>
+    <h2>Welcome to the Home of Hockey</h2>
 </div>
 
-<button onclick="makeMatch()">Show Matchup</button>
+<!-- TEAMS LIST -->
+<div class="teams-container">
+    <div class="teams-grid" id="teams">
+        <!-- TEMPLATE TEAM CARDS -->
+        <script>
+            const teamData = [
+                ["Anaheim Ducks", "https://loodibee.com/wp-content/uploads/nhl-anaheim-ducks-logo.png"],
+                ["Arizona Coyotes", "https://loodibee.com/wp-content/uploads/nhl-arizona-coyotes-logo.png"],
+                ["Boston Bruins", "https://loodibee.com/wp-content/uploads/nhl-boston-bruins-logo.png"],
+                ["Buffalo Sabres", "https://loodibee.com/wp-content/uploads/nhl-buffalo-sabres-logo.png"],
+                ["Calgary Flames", "https://loodibee.com/wp-content/uploads/nhl-calgary-flames-logo.png"],
+                ["Carolina Hurricanes", "https://loodibee.com/wp-content/uploads/nhl-carolina-hurricanes-logo.png"],
+                ["Chicago Blackhawks", "https://loodibee.com/wp-content/uploads/nhl-chicago-blackhawks-logo.png"],
+                ["Colorado Avalanche", "https://loodibee.com/wp-content/uploads/nhl-colorado-avalanche-logo.png"],
+                ["Columbus Blue Jackets", "https://loodibee.com/wp-content/uploads/nhl-columbus-blue-jackets-logo.png"],
+                ["Dallas Stars", "https://loodibee.com/wp-content/uploads/nhl-dallas-stars-logo.png"],
+                ["Detroit Red Wings", "https://loodibee.com/wp-content/uploads/nhl-detroit-red-wings-logo.png"],
+                ["Edmonton Oilers", "https://loodibee.com/wp-content/uploads/nhl-edmonton-oilers-logo.png"],
+                ["Florida Panthers", "https://loodibee.com/wp-content/uploads/nhl-florida-panthers-logo.png"],
+                ["Los Angeles Kings", "https://loodibee.com/wp-content/uploads/nhl-los-angeles-kings-logo.png"],
+                ["Minnesota Wild", "https://loodibee.com/wp-content/uploads/nhl-minnesota-wild-logo.png"],
+                ["Montreal Canadiens", "https://loodibee.com/wp-content/uploads/nhl-montreal-canadiens-logo.png"],
+                ["Nashville Predators", "https://loodibee.com/wp-content/uploads/nhl-nashville-predators-logo.png"],
+                ["New Jersey Devils", "https://loodibee.com/wp-content/uploads/nhl-new-jersey-devils-logo.png"],
+                ["New York Islanders", "https://loodibee.com/wp-content/uploads/nhl-new-york-islanders-logo.png"],
+                ["New York Rangers", "https://loodibee.com/wp-content/uploads/nhl-new-york-rangers-logo.png"],
+                ["Ottawa Senators", "https://loodibee.com/wp-content/uploads/nhl-ottawa-senators-logo.png"],
+                ["Philadelphia Flyers", "https://loodibee.com/wp-content/uploads/nhl-philadelphia-flyers-logo.png"],
+                ["Pittsburgh Penguins", "https://loodibee.com/wp-content/uploads/nhl-pittsburgh-penguins-logo.png"],
+                ["San Jose Sharks", "https://loodibee.com/wp-content/uploads/nhl-san-jose-sharks-logo.png"],
+                ["Seattle Kraken", "https://loodibee.com/wp-content/uploads/nhl-seattle-kraken-logo.png"],
+                ["St. Louis Blues", "https://loodibee.com/wp-content/uploads/nhl-st-louis-blues-logo.png"],
+                ["Tampa Bay Lightning", "https://loodibee.com/wp-content/uploads/nhl-tampa-bay-lightning-logo.png"],
+                ["Toronto Maple Leafs", "https://loodibee.com/wp-content/uploads/nhl-toronto-maple-leafs-logo.png"],
+                ["Vancouver Canucks", "https://loodibee.com/wp-content/uploads/nhl-vancouver-canucks-logo.png"],
+                ["Vegas Golden Knights", "https://loodibee.com/wp-content/uploads/nhl-vegas-golden-knights-logo.png"],
+                ["Washington Capitals", "https://loodibee.com/wp-content/uploads/nhl-washington-capitals-logo.png"],
+                ["Winnipeg Jets", "https://loodibee.com/wp-content/uploads/nhl-winnipeg-jets-logo.png"]
+            ];
 
-<div id="result"></div>
+            document.write(teamData.map(t =>
+                `<div class='team'>
+                    <div>${t[0]}</div>
+                    <img src='${t[1]}' alt='${t[0]} logo'>
+                </div>`
+            ).join(""));
+        </script>
+    </div>
+
+    <button onclick="makeMatch()">Show Matchup</button>
+
+    <div id="result"></div>
+</div>
+
+
+<script>
+    function makeMatch() {
+        const teams = teamData;
+
+        let t1 = teams[Math.floor(Math.random() * teams.length)];
+        let t2 = teams[Math.floor(Math.random() * teams.length)];
+
+        while (t1[0] === t2[0]) {
+            t2 = teams[Math.floor(Math.random() * teams.length)];
+        }
+
+        document.getElementById("result").innerHTML = `
+            <div class="fixture-box">
+                <img class="fixture-logo" src="${t1[1]}"><br>
+                ${t1[0]} <br><br> VS <br><br>
+                <img class="fixture-logo" src="${t2[1]}"><br>
+                ${t2[0]}
+            </div>
+        `;
+    }
+</script>
 
 </body>
 </html>

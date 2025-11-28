@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NFL Teams & Matchups</title>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(to bottom, #101820 10%, #000000);
+        color: white;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .header {
+        padding: 30px;
+        background: #0a0f14;
+        border-bottom: 3px solid #c60c30;
+    }
+
+    .header img {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        margin: 10px 0 0 0;
+        font-size: 42px;
+        letter-spacing: 2px;
+    }
+
+    h2 {
+        margin-top: 5px;
+        color: #ffccd2;
+        font-weight: 400;
+    }
+
+    .teams-container {
+        width: 95%;
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .teams-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .team {
+        background: #16212b;
+        border-radius: 10px;
+        padding: 12px;
+        transition: 0.3s;
+        border: 2px solid #c60c3044;
+        cursor: pointer;
+    }
+
+    .team:hover {
+        background: #233544;
+        transform: scale(1.05);
+        border-color: #c60c30;
+    }
+
+    .team img {
+        width: 90px;
+        margin-top: 10px;
+    }
+
+    button {
+        margin-top: 30px;
+        padding: 14px 30px;
+        font-size: 20px;
+        background: #c60c30;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        color: white;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #8f0a24;
+        transform: scale(1.05);
+    }
+
+    #result {
+        margin-top: 30px;
+        font-size: 26px;
+        font-weight: bold;
+        padding: 20px;
+        min-height: 40px;
+        transition: 0.3s;
+    }
+
+    .fixture-box {
+        background: #142028;
+        padding: 20px;
+        width: 45%;
+        margin: auto;
+        border-radius: 10px;
+        border: 2px solid #c60c30;
+        box-shadow: 0px 0px 15px rgba(198, 12, 48, 0.5);
+        animation: pop 0.4s ease;
+    }
+
+    .fixture-logo {
+        width: 120px;
+        margin: 10px;
+    }
+
+    @keyframes pop {
+        0% { transform: scale(0.7); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/National_Football_League_logo.svg" alt="NFL Logo">
+    <h1>NFL Teams</h1>
+    <h2>Welcome to the Gridiron</h2>
+</div>
+
+<div class="teams-container">
+    <div class="teams-grid" id="teams"></div>
+
+    <button onclick="makeMatch()">Show Matchup</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    const teamData = [
+        ["Arizona Cardinals", "https://loodibee.com/wp-content/uploads/nfl-arizona-cardinals-logo.png"],
+        ["Atlanta Falcons", "https://loodibee.com/wp-content/uploads/nfl-atlanta-falcons-logo.png"],
+        ["Baltimore Ravens", "https://loodibee.com/wp-content/uploads/nfl-baltimore-ravens-logo.png"],
+        ["Buffalo Bills", "https://loodibee.com/wp-content/uploads/nfl-buffalo-bills-logo.png"],
+        ["Carolina Panthers", "https://loodibee.com/wp-content/uploads/nfl-carolina-panthers-logo.png"],
+        ["Chicago Bears", "https://loodibee.com/wp-content/uploads/nfl-chicago-bears-logo.png"],
+        ["Cincinnati Bengals", "https://loodibee.com/wp-content/uploads/nfl-cincinnati-bengals-logo.png"],
+        ["Cleveland Browns", "https://loodibee.com/wp-content/uploads/nfl-cleveland-browns-logo.png"],
+        ["Dallas Cowboys", "https://loodibee.com/wp-content/uploads/nfl-dallas-cowboys-logo.png"],
+        ["Denver Broncos", "https://loodibee.com/wp-content/uploads/nfl-denver-broncos-logo.png"],
+        ["Detroit Lions", "https://loodibee.com/wp-content/uploads/nfl-detroit-lions-logo.png"],
+        ["Green Bay Packers", "https://loodibee.com/wp-content/uploads/nfl-green-bay-packers-logo.png"],
+        ["Houston Texans", "https://loodibee.com/wp-content/uploads/nfl-houston-texans-logo.png"],
+        ["Indianapolis Colts", "https://loodibee.com/wp-content/uploads/nfl-indianapolis-colts-logo.png"],
+        ["Jacksonville Jaguars", "https://loodibee.com/wp-content/uploads/nfl-jacksonville-jaguars-logo.png"],
+        ["Kansas City Chiefs", "https://loodibee.com/wp-content/uploads/nfl-kansas-city-chiefs-logo.png"],
+        ["Las Vegas Raiders", "https://loodibee.com/wp-content/uploads/nfl-las-vegas-raiders-logo.png"],
+        ["Los Angeles Chargers", "https://loodibee.com/wp-content/uploads/nfl-los-angeles-chargers-logo.png"],
+        ["Los Angeles Rams", "https://loodibee.com/wp-content/uploads/nfl-los-angeles-rams-logo.png"],
+        ["Miami Dolphins", "https://loodibee.com/wp-content/uploads/nfl-miami-dolphins-logo.png"],
+        ["Minnesota Vikings", "https://loodibee.com/wp-content/uploads/nfl-minnesota-vikings-logo.png"],
+        ["New England Patriots", "https://loodibee.com/wp-content/uploads/nfl-new-england-patriots-logo.png"],
+        ["New Orleans Saints", "https://loodibee.com/wp-content/uploads/nfl-new-orleans-saints-logo.png"],
+        ["New York Giants", "https://loodibee.com/wp-content/uploads/nfl-new-york-giants-logo.png"],
+        ["New York Jets", "https://loodibee.com/wp-content/uploads/nfl-new-york-jets-logo.png"],
+        ["Philadelphia Eagles", "https://loodibee.com/wp-content/uploads/nfl-philadelphia-eagles-logo.png"],
+        ["Pittsburgh Steelers", "https://loodibee.com/wp-content/uploads/nfl-pittsburgh-steelers-logo.png"],
+        ["San Francisco 49ers", "https://loodibee.com/wp-content/uploads/nfl-san-francisco-49ers-logo.png"],
+        ["Seattle Seahawks", "https://loodibee.com/wp-content/uploads/nfl-seattle-seahawks-logo.png"],
+        ["Tampa Bay Buccaneers", "https://loodibee.com/wp-content/uploads/nfl-tampa-bay-buccaneers-logo.png"],
+        ["Tennessee Titans", "https://loodibee.com/wp-content/uploads/nfl-tennessee-titans-logo.png"],
+        ["Washington Commanders", "https://loodibee.com/wp-content/uploads/nfl-washington-commanders-logo.png"]
+    ];
+
+    // Load all teams into grid
+    const grid = document.getElementById("teams");
+    teamData.forEach(team => {
+        const div = document.createElement("div");
+        div.className = "team";
+        div.innerHTML = `
+            <div>${team[0]}</div>
+            <img src="${team[1]}" alt="${team[0]} logo">
+        `;
+        grid.appendChild(div);
+    });
+
+    function makeMatch() {
+        let t1 = teamData[Math.floor(Math.random() * teamData.length)];
+        let t2 = teamData[Math.floor(Math.random() * teamData.length)];
+
+        while (t1[0] === t2[0]) {
+            t2 = teamData[Math.floor(Math.random() * teamData.length)];
+        }
+
+        document.getElementById("result").innerHTML = `
+            <div class="fixture-box">
+                <img class="fixture-logo" src="${t1[1]}"><br>
+                ${t1[0]} <br><br> VS <br><br>
+                <img class="fixture-logo" src="${t2[1]}"><br>
+                ${t2[0]}
+            </div>
+        `;
+    }
+</script>
+
+</body>
+</html>
+
+
+
