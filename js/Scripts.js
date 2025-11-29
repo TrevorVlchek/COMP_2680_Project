@@ -10,28 +10,33 @@ console.log(web_page);
 //localstorage.clear();
 
 /*-------SPORTS.HTML SCRIPTS-----*/
-if(web_page.includes("zz")) //TODO: Check if this still works  //change to index.html for final release // ALSO IGNORE FOR RN
+if(web_page.includes("team.html")) //TODO: Check if this still works 
 {
     setInterval(checkSchedule, 1000);
-    var game_list = document.getElementById("team-schedule");
-    var game = game_list.getElementsByTagName("li");
+    var game_list = document.getElementById("notify-container");
+    var checkbox = game_list.querySelectorAll('input[type = "checkbox"]'); //Get all inputs inside notify container
 
     //---Alert When Game Starts---
+    //--Works with real time however to test just set date_string to any time and set the time on the teams page to the same time
     function checkSchedule()
     {
-        for(var i = 0; i < game.length; i++)
+        for(var i = 0; i < checkbox.length; i++)
         {
             
             let date = new Date();
             let date_string = date.toLocaleDateString() + " " + date.toLocaleTimeString(); //Set date to locale string so list date and real time date and of same type and format
             
-            let checkbox = document.getElementById("check-game"+(i+1)); //Get checkbox value 
-
-            if (date_string == game[i].textContent && checkbox.checked == true) //Alert user if they checked the box and display game details
+            let games = document.getElementById("game"+ (i+1)+"-time"); //Get checkbox value by using id
+            console.log("Checkbox " + checkbox[i].checked);
+            console.log("Date "+date_string);
+            console.log("Game Date " + games.textContent);
+            console.log("");
+            if (date_string == games.textContent && checkbox[i].checked == true) //Alert user if they checked the box and display game details
             {
-                let game_details = document.getElementById("game"+(i+1)+"-details");
+
+                let game_details = document.getElementById("game"+ (i+1)+"-details");
                 console.log("Details are = " + game_details.textContent);
-                alert(game_details.textContent + " is starting soon!");
+                alert(game_details.textContent + " is starting now!");
             }
             
         }

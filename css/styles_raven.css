@@ -335,7 +335,7 @@ tbody tr:hover {
 
 }
 
-#game
+.game
 {
     float: left;
     clear: left;
@@ -362,12 +362,12 @@ tbody tr:hover {
     
 }
 
-#game p
+.game p
 {
     margin: 0%;
 }
 
-#game h4
+.game h4
 {
     margin-top: 5%;
     margin-bottom: 5%;
