@@ -88,11 +88,11 @@ if(web_page.includes("football.html"))
 if(web_page.includes("hockey.html"))
 {
      const teamData = [
-        ["Arsenal", "https://loodibee.com/wp-content/uploads/premier-league-arsenal-fc-logo.png"],
-        ["Aston Villa", "https://loodibee.com/wp-content/uploads/premier-league-aston-villa-logo.png"],
-        ["Bournemouth", "https://loodibee.com/wp-content/uploads/premier-league-afc-bournemouth-logo.png"],
-        ["Brentford", "https://loodibee.com/wp-content/uploads/premier-league-brentford-fc-logo.png"],
-        ["Brighton", "https://loodibee.com/wp-content/uploads/premier-league-brighton-hove-albion-logo.png"]
+        ["Edmonton Oilers", "https://loodibee.com/wp-content/uploads/premier-league-arsenal-fc-logo.png"],
+        ["Calgary Flames", "https://loodibee.com/wp-content/uploads/premier-league-aston-villa-logo.png"],
+        ["Florida Panther", "https://loodibee.com/wp-content/uploads/premier-league-afc-bournemouth-logo.png"],
+        ["Vancouver Canucks", "https://loodibee.com/wp-content/uploads/premier-league-brentford-fc-logo.png"],
+        ["Boston Bruins", "https://loodibee.com/wp-content/uploads/premier-league-brighton-hove-albion-logo.png"]
 
     ];
 
