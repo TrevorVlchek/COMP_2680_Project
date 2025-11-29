@@ -1,84 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-    <title>Baltimore Ravens</title>
-    <link rel = "StyleSheet" href = "../css/styles_oilers.css">
-    <script src = "js/Scripts.js" defer></script>
+    <meta charset="UTF-8">
+    <title>Teams | League Radar</title>
+
+    <!-- CSS IS IN THE SAME FOLDER -->
+    <link rel="stylesheet" href="../css/styles_oilers.css">
 </head>
 <body>
-    <div id = "container">
 
-        <!--HEADING ROW 1, COL 1-->
-        <header id = "header-container">
-            <h1 id = "header-title">Baltimore Ravens</h1>
+<div id="container">
 
-        </header>
-        
-        <!--NAV HOME ROW 1, COL 2-->
-        <nav id = "nav-home-container">
-            <img src="../images/home.png" width="80" height="80" alt="NO IMAGE FOUND">
-        </nav>
-
-        <!--PLAYER TABLE ROW 2, COL 1-->
-        <div id = "players-container">
-            <table id = "player-table"> 
-                <h2 id = "table-heading">Table</h2>
-                <table>
-                    <tr> <th>Player</th> <th>GP</th> <th>Yards</th> <th>TD</th> <th>TD%</th> <th>AVG</th> <th>OV</th> </tr>
-                    <tr> <td>Rasheen Ali</td> <td>GP</td> <td>Yards</td> <td>TD</td> <td>TD%</td> <td>AVG</td> <td>OV</td></tr>
-                    <tr> <td>Rasheen Ali</td> <td>GP</td> <td>Yards</td> <td>TD</td> <td>TD%</td> <td>AVG</td> <td>OV</td></tr>
-                    <tr> <td>Rasheen Ali</td> <td>GP</td> <td>Yards</td> <td>TD</td> <td>TD%</td> <td>AVG</td> <td>OV</td></tr>
-                    <tr> <td>Rasheen Ali</td> <td>GP</td> <td>Yards</td> <td>TD</td> <td>TD%</td> <td>AVG</td> <td>OV</td></tr>
-                    <tr> <td>Rasheen Ali</td> <td>GP</td> <td>Yards</td> <td>TD</td> <td>TD%</td> <td>AVG</td> <td>OV</td></tr>
-                    <tr> <td>Rasheen Ali</td> <td>GP</td> <td>Yards</td> <td>TD</td> <td>TD%</td> <td>AVG</td> <td>OV</td></tr>
-                    <tr> <td>Rasheen Ali</td> <td>GP</td> <td>Yards</td> <td>TD</td> <td>TD%</td> <td>AVG</td> <td>OV</td></tr>
-                    <tr> <td>Rasheen Ali</td> <td>GP</td> <td>Yards</td> <td>TD</td> <td>TD%</td> <td>AVG</td> <td>OV</td></tr>
-                    <tr> <td>Rasheen Ali</td> <td>GP</td> <td>Yards</td> <td>TD</td> <td>TD%</td> <td>AVG</td> <td>OV</td></tr>
-                    <tr> <td>Rasheen Ali</td> <td>GP</td> <td>Yards</td> <td>TD</td> <td>TD%</td> <td>AVG</td> <td>OV</td></tr> 
-                </table>
-            </table>
-
+    <!-- ===== HEADER (matches your other pages) ===== -->
+    <header id="main-header">
+        <div id="header-title">
+            <h1>League Radar</h1>
+            <p>Never Miss a Game | Track any sport, anywhere, anytime</p>
         </div>
 
-        <!--TEAM SCHEDULE ROW 2, COL 2-->
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div><a href="../index.html">Home</a></div>
+            <div><a href="../sports/football.html">Football</a></div>
+            <div><a href="../sports/hockey.html">Hockey</a></div>
+
+            
+            <div><a href="../sports/soccer.html">Soccer</a></div>
+
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="page-inner" >
+
+        <!-- Sport cards -->
+        
+
+        <!-- Featured teams table -->
+        <section class="featured-teams">
+            <h2>Edmonton Oilers</h2>
+            <p class="featured-desc">
+                Statistics 2025/26 Season
+            </p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Pos</th>
+                            <th>GP</th>
+                            <th>G</th>
+                            <th>A</th>
+                            <th>+/-</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Connor McDavid</td>
+                            <td>C</td>
+                            <td>25</td>
+                            <td>10</td>
+                            <td>24</td>
+                            <td>-6</td>
+                        </tr>
+                        <tr>
+                            <td>Leon Draisaitl</td>
+                            <td>C</td>
+                            <td>25</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>+4</td>
+                        </tr>
+                        <tr>
+                            <td>Evan Bouchard</td>
+                            <td>D</td>
+                            <td>25</td>
+                            <td>4</td>
+                            <td>17</td>
+                            <td>-1</td>
+                        </tr>
+                        <tr>
+                            <td>Jack Roslovic</td>
+                            <td>C</td>
+                            <td>23</td>
+                            <td>10</td>
+                            <td>8</td>
+                            <td>+1</td>
+                        </tr>
+                        <tr>
+                            <td>Vasily Podkolzin</td>
+                            <td>RW</td>
+                            <td>25</td>
+                            <td>4</td>
+                            <td>6</td>
+                            <td>+5</td>
+                        </tr>
+                        <tr>
+                            <td>Vasily Podkolzin</td>
+                            <td>RW</td>
+                            <td>25</td>
+                            <td>4</td>
+                            <td>6</td>
+                            <td>+5</td>
+                        </tr>
+                        <tr>
+                            <td>Vasily Podkolzin</td>
+                            <td>RW</td>
+                            <td>25</td>
+                            <td>4</td>
+                            <td>6</td>
+                            <td>+5</td>
+                        </tr>
+                        <tr>
+                            <td>Vasily Podkolzin</td>
+                            <td>RW</td>
+                            <td>25</td>
+                            <td>4</td>
+                            <td>6</td>
+                            <td>+5</td>
+                        </tr>
+                        <tr>
+                            <td>Vasily Podkolzin</td>
+                            <td>RW</td>
+                            <td>25</td>
+                            <td>4</td>
+                            <td>6</td>
+                            <td>+5</td>
+                        </tr>
+                        <tr>
+                            <td>Vasily Podkolzin</td>
+                            <td>RW</td>
+                            <td>25</td>
+                            <td>4</td>
+                            <td>6</td>
+                            <td>+5</td>
+                        </tr>
+                        <tr>
+                            <td>Vasily Podkolzin</td>
+                            <td>RW</td>
+                            <td>25</td>
+                            <td>4</td>
+                            <td>6</td>
+                            <td>+5</td>
+                        </tr>
+                        <tr>
+                            <td>Vasily Podkolzin</td>
+                            <td>RW</td>
+                            <td>25</td>
+                            <td>4</td>
+                            <td>6</td>
+                            <td>+5</td>
+                        </tr>
+                        <tr>
+                            <td>Vasily Podkolzin</td>
+                            <td>RW</td>
+                            <td>25</td>
+                            <td>4</td>
+                            <td>6</td>
+                            <td>+5</td>
+                        </tr>
+                        <tr>
+                            <td>Vasily Podkolzin</td>
+                            <td>RW</td>
+                            <td>25</td>
+                            <td>4</td>
+                            <td>6</td>
+                            <td>+5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
         <div id = "team-sched-container">
-            <h2 id = "schedule-heading" style = "margin: 0%;">Teams Schedule</h2>
+            <h2 id = "schedule-heading" style = "margin: 0%; margin-bottom: 5%; float: left;">Schedule </h2>
             <!--Game 1-->
             <div id = "games-container">
                 <div id = "game">
-                    <h4>Game 4</h4>
-                    <p>Ravens vs Cardinals</p>
-                    <p>Dec 3rd 2025</p>
-                    <p id = "game1-time">11/28/2025 4:04:25 PM</p> <!--NEED THIS ID IN ORDER TO JS TO NOTIFY USER-->
-                    <img src= "../images/football_logos/cardinals.png" width="50" height = "50" alt = "No Image Found"> vs <img src= "../images/football_logos/cardinals.png" width="50" height="50" alt = "No Image Found">
+                    <h4>Game 12</h4>
+                    <p>Oilers vs Wild</p>
+                    <p> Tues Dec 2nd 2025</p>
+                    <p id = "game1-time">12/4/2025 4:00:00 PM</p> <!--NEED THIS ID IN ORDER TO JS TO NOTIFY USER-->
+                    <div style = "margin-top:10% ;"><img src= "../images/hockey_logos/oilers.png" width="50" height = "50" alt = "No Image Found"> <span > vs </span> <img src= "../images/hockey_logos/wild.png" width="50" height="50" alt = "No Image Found"></div>
                 </div>
 
                 <!--Game 2-->
                 <div id = "game"> 
-                    <h4>Game 4</h4>
-                    <p>Ravens vs Cardinals</p>
-                    <p>Dec 3rd 2025</p>
-                    <p>11/28/2025 4:04:25 PM</p> <!--NEED THIS ID IN ORDER TO JS TO NOTIFY USER-->
+                    <h4>Game 13</h4>
+                    <p>Oilers vs Golden Knights</p>
+                    <p>Dec 4rth 2025</p>
+                    <p>12/4/2025 4:00:00 PM</p> <!--NEED THIS ID IN ORDER TO JS TO NOTIFY USER-->
+                    <div style = "margin-top:10% ;"><img src= "../images/hockey_logos/oilers.png" width="50" height = "50" alt = "No Image Found"> <span > vs </span> <img src= "../images/hockey_logos/golden_knights.png" width="50" height="50" alt = "No Image Found"></div>
                 </div>
 
                 <!--Game 3-->
                 <div id = "game"> 
-                    <h4>Game 4</h4>
-                    <p>Ravens vs Cardinals</p>
-                    <p>Dec 3rd 2025</p>
-                    <p>11/28/2025 4:04:25 PM</p> <!--NEED THIS ID IN ORDER TO JS TO NOTIFY USER-->
+                    <h4>Game 14</h4>
+                    <p>Oilers vs Ducks</p>
+                    <p>Dec 6th 2025</p>
+                    <p>12/6/2025 4:00:00 PM</p> <!--NEED THIS ID IN ORDER TO JS TO NOTIFY USER-->
+                    <div style = "margin-top:10% ;"><img src= "../images/hockey_logos/oilers.png" width="50" height = "50" alt = "No Image Found"> <span > vs </span> <img src= "../images/hockey_logos/ducks.png" width="50" height="50" alt = "No Image Found"></div>
                 </div>
 
                 <!--Game 4-->
                 <div id = "game"> 
-                    <h4>Game 4</h4>
-                    <p>Ravens vs Cardinals</p>
-                    <p>Dec 3rd 2025</p>
-                    <p>11/28/2025 4:04:25 PM</p> <!--NEED THIS ID IN ORDER TO JS TO NOTIFY USER-->
+                    <h4>Game 15</h4>
+                    <p>Oilers vs Flames</p>
+                    <p>Dec 9th 2025</p>
+                    <p>12/9/2025 6:00:00 PM</p> <!--NEED THIS ID IN ORDER TO JS TO NOTIFY USER-->
+                    <div style = "margin-top:10% ;"><img src= "../images/hockey_logos/oilers.png" width="50" height = "50" alt = "No Image Found"> <span > vs </span> <img src= "../images/hockey_logos/flames.png" width="50" height="50" alt = "No Image Found"></div>
                 </div>
+
+                <!--Game 5-->
+                <div id = "game"> 
+                    <h4>Game 16</h4>
+                    <p>Oilers vs BlackHawks</p>
+                    <p>Dec 11th 2025</p>
+                    <p>12/11/2025 6:00:00 PM</p> <!--NEED THIS ID IN ORDER TO JS TO NOTIFY USER-->
+                    <div style = "margin-top:10% ;"><img src= "../images/hockey_logos/oilers.png" width="50" height = "50" alt = "No Image Found"> <span > vs </span> <img src= "../images/hockey_logos/blackhawks.png" width="50" height="50" alt = "No Image Found"></div>
+                </div>
+
+                
             </div>
-            
+
             <div id = "notify-container">
 
                 <div id = "checkbox">
@@ -94,46 +239,25 @@
                 </div>
 
                 <div id = "checkbox">
-                    <input type="checkbox" id = "game4">
+                    <input type="checkbox" id = "game4" onclick = "">
+                </div>
+
+                <div id = "checkbox">
+                    <input type="checkbox" id = "game5">
                 </div>
             </div>
         </div>
 
-        <!--FOOTER INFO SECTION ROW 3, COL 1->2-->
-        <div id = "footer-section">
-            <!--FOOTER CONTACT SECTION-->
-            <footer id = "contact-footer">
-                <div id="footer_tel content_card">
-                    <h3><a href="tel:+15555555555">+1 (555) 555-5555</a></h3>
-                </div>
+    
 
-                <div id="footer_mail content_card">
-                    <h3><a href="mailto: placeholder@email.com">placeholder@email.com</a></h3>
-                </div>
-                
-                <div id="footer_address content_card">
-                    <h3>Unit 1234, 567 Rue Le Jour, Kamloops, British Columbia, Canada</h3>
-                </div>
-            </footer>
+    </main>
 
-            
-            <!--Information links such as copyright, and version, privacy-->
-            <footer id = "info-footer">
-                <div id = "footer_copyright content_card">
-                    <h3>
-                        © Theodore Mulenga, Senanayake Pethmin, Gabriel Saito, Trevor Vlchek
-                    </h3>
-                </div>
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer-section">
+        <div id="footer-left">League Radar &copy; 2025</div>
+    </footer>
 
-                <div id = "footer_privacy content_card">
-                    <h3><a href="#PrivacyPolicy">Privacy</a></h3>
-                </div>
-                <div id = "footer_version content_card">
-                    <h3>Version 1.0</h3>
-                </div>
-            </footer>
-        </div>
+</div>
 
-    </div>
 </body>
 </html>
