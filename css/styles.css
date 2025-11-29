@@ -192,10 +192,12 @@ h2 {
     border-right: .4rem solid black;
     border-bottom: .4rem solid black;
     text-shadow: 3px 3px 0 darkblue;
+
+    overflow: hidden;
 }
     
 
-.article img
+.article img, video
 {
     
     border: 1px solid white;
@@ -206,6 +208,7 @@ h2 {
     height: 20vh;
 
 }
+
 
 /*Footer*/
 #footer-section {
