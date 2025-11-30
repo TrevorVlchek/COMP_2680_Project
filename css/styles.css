@@ -34,6 +34,21 @@ header h1 {
     background-color: rgba(36, 145, 203, 0.5);
 }
 
+#username
+{
+    display: inline;
+
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+#email
+{
+    display: inline;
+    
+    font-family: 'Courier New', Courier, monospace;
+}
+
 header#main-header
 {
     background-image: url('../images/header_stadiumv2.png');
@@ -184,6 +199,8 @@ h2 {
     border-bottom: .4rem solid #212121;
     color: white;
     text-shadow: 3px 3px 0 black;
+
+    width: 25%;
 }
 
 .article {

@@ -7,6 +7,114 @@ body {
         text-align: center;
     }
 
+    /* ===== HEADER ===== */
+header h1 {
+    font-size: 3rem;
+    -webkit-text-stroke: 0.1rem black;
+    background-color: rgba(36, 145, 203, 0.5);
+    margin: 0;
+}
+
+header#main-header {
+    background-image: url('../images/header_stadiumv2.png');
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    background-color: #212121;
+    border: 3px solid black;
+    border-bottom: 3px solid black;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+header#main-header > div {
+    border: 2px solid white;
+    padding: 2%;
+}
+
+#header-title {
+    color: white;
+    text-decoration: underline;
+    font-weight: bolder;
+    text-align: left;
+}
+
+#header-title p {
+    font-size: 2rem;
+    -webkit-text-stroke: 0.08rem black;
+    background-color: rgba(36, 145, 203, 0.5);
+    margin: 0;
+}
+
+
+/* ===== NAVBAR ===== */
+.navbar {
+    grid-column: 1 / -1;
+    overflow: hidden;
+    background-color: darkblue;
+    border-top: 2px solid black;
+}
+
+.navbar > div,
+.navbar .dropdown {
+    float: left;
+    font-size: 1.3rem;
+    width: 25%;
+    color: white;
+    text-align: center;
+    padding: 0.4rem 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.dropdown .dropbtn {
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: darkblue;
+    width: 100%;
+    cursor: pointer;
+}
+
+.navbar > div:hover,
+.dropdown:hover .dropbtn {
+    background-color: #212121;
+    color: white;
+}
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    background-color: #212121;
+    min-width: 160px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.dropdown_menu a {
+    float: none;
+    color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown_menu a:hover {
+    background-color: white;
+    color: #212121;
+}
+
+.dropdown:hover .dropdown_menu {
+    display: block;
+}
+
     .header {
         padding: 30px;
         background: #0a0f14;
@@ -100,6 +208,27 @@ body {
         box-shadow: 0px 0px 15px rgba(198, 12, 48, 0.5);
         animation: pop 0.4s ease;
     }
+
+    /* ===== FOOTER ===== */
+#footer-section {
+    border: 0.2rem dashed darkblue;
+    background-color: darkblue;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 0.4rem 0;
+}
+
+[id$="footer"] {
+    display: inline-block;
+    margin: 0.2rem 0.4rem;
+}
+
+[id^="footer"] {
+    background-color: #212121;
+    color: white;
+    padding: 0.4rem 0.7rem;
+    border: 0.1rem solid white;
+}
 
     .fixture-logo {
         width: 120px;

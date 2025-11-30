@@ -4,12 +4,12 @@ console.log(web_page);
 if(web_page.includes("soccer.html"))
 {
      const teamData = [
-        ["Arsenal", "https://loodibee.com/wp-content/uploads/premier-league-arsenal-fc-logo.png"],
-        ["Aston Villa", "https://loodibee.com/wp-content/uploads/premier-league-aston-villa-logo.png"],
-        ["Bournemouth", "https://loodibee.com/wp-content/uploads/premier-league-afc-bournemouth-logo.png"],
-        ["Brentford", "https://loodibee.com/wp-content/uploads/premier-league-brentford-fc-logo.png"],
-        ["Brighton", "https://loodibee.com/wp-content/uploads/premier-league-brighton-hove-albion-logo.png"]
-
+        ["Arsenal", "../images/soccer_logos/arsenal.png"],
+        ["Barcelona", "../images/soccer_logos/barcelona.png"],
+        ["Liverpool", "../images/soccer_logos/liverpool.png"],
+        ["Madrid", "../images/soccer_logos/madrid.png"],
+        ["Manchester", "../images/soccer_logos/manchester.png"],
+        ["Milan", "../images/soccer_logos/milan.png"]
     ];
 
     // Load teams dynamically
@@ -46,11 +46,12 @@ if(web_page.includes("soccer.html"))
 if(web_page.includes("football.html"))
 {
     const teamData = [
-        ["Arizona Cardinals", "https://loodibee.com/wp-content/uploads/nfl-arizona-cardinals-logo.png"],
-        ["Atlanta Falcons", "https://loodibee.com/wp-content/uploads/nfl-atlanta-falcons-logo.png"],
-        ["Baltimore Ravens", "https://loodibee.com/wp-content/uploads/nfl-baltimore-ravens-logo.png"],
-        ["Buffalo Bills", "https://loodibee.com/wp-content/uploads/nfl-buffalo-bills-logo.png"],
-        ["Carolina Panthers", "https://loodibee.com/wp-content/uploads/nfl-carolina-panthers-logo.png"]
+        ["Chicago Bears", "../images/football_logos/bears.png"],
+        ["Buffalo Bills", "../images/football_logos/bills.png"],
+        ["Arizona Cardinals", "../images/football_logos/cardinals.png"],
+        ["Carolina Panthers", "../images/football_logos/panthers.png"],
+        ["Atlanta Falcons", "../images/football_logos/falcons.png"],
+        ["Baltimore Ravens", "../images/football_logos/ravens.png"]
        
     ];
 
@@ -88,11 +89,12 @@ if(web_page.includes("football.html"))
 if(web_page.includes("hockey.html"))
 {
      const teamData = [
-        ["Edmonton Oilers", "https://loodibee.com/wp-content/uploads/premier-league-arsenal-fc-logo.png"],
-        ["Calgary Flames", "https://loodibee.com/wp-content/uploads/premier-league-aston-villa-logo.png"],
-        ["Florida Panther", "https://loodibee.com/wp-content/uploads/premier-league-afc-bournemouth-logo.png"],
-        ["Vancouver Canucks", "https://loodibee.com/wp-content/uploads/premier-league-brentford-fc-logo.png"],
-        ["Boston Bruins", "https://loodibee.com/wp-content/uploads/premier-league-brighton-hove-albion-logo.png"]
+        ["Chicago BlackHawks", "../images/hockey_logos/blackhawks.png"],
+        ["Anaheim Ducks", "../images/hockey_logos/ducks.png"],
+        ["Calgary Flames", "../images/hockey_logos/flames.png"],
+        ["Vegas Golden Knights", "../images/hockey_logos/golden_knights.png"],
+        ["Minnesota Wild", "../images/hockey_logos/wild.png"],
+        ["Edmonton Oilers", "../images/hockey_logos/oilers.png"]
 
     ];
 

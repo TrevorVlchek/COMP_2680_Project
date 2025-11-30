@@ -14,8 +14,8 @@
             Scrollbar and sizing issues. Take another crack later?-->
             <!--Added extra p tag for turning it hidden when the user signs in, without some tage the "//" will always be visibile-->
             <div class="account"><a id = "sign-up" href = "account/create_account.html" target="_blank">Sign up</a> <p style = "display: inline;" id = "seperator">//</p> <a id = "sign-in" href="account/sign_in.html" target = "_blank">Log In</a>  
-                <p style = "display: inline;" id = "username"> </p>
-                <p style = "display: inline;" id = "email"> </p>
+                <p id = "username"> </p>
+                <p id = "email"> </p>
                 <button id = "sign-out" onclick="signOut()">Sign Out</button>
 
             </div>
@@ -32,7 +32,7 @@
                     </button>
                     <div class="dropdown_menu" id="dropdown_hockey">
                         <a href="sports/hockey.html">GAMES</a>
-                        <a href="#">TEAMS</a> <!--No need to actually make pages for this.
+                        <a href="teams/oilers_team.html">TEAMS</a> <!--No need to actually make pages for this.
                             The dropdown menus are just here to demonstrate our design skills-->
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                     </button>
                     <div class="dropdown_menu" id="dropdown_soccer">
                         <a href="sports/soccer.html">GAMES</a>
-                        <a href="#placeholder">TEAMS</a>
+                        <a href="teams/arsenal_team.html">TEAMS</a>
                     </div>
                 </div>
                 <div class="dropdown" id="nav_football">
@@ -51,7 +51,7 @@
                     </button>
                     <div class="dropdown_menu" id="dropdown_football">
                         <a href="sports/football.html">GAMES</a>
-                        <a href="#placeholder">TEAMS</a>
+                        <a href="teams/ravens_team.html">TEAMS</a>
                     </div>
                 </div> 
             </nav>
@@ -65,49 +65,49 @@
                 <p>Want to keep up with every game happening right now, worldwide? Look no further!</p>
 
                 <div class="ongoing_games content_card">
-                    <h3>TEAM 1 VS TEAM 2</h3>
-                    <p>CURRENT SCORE: X-X</p>
-                    <p>[Current phase of game, EG inning, period]</p>
+                    <h3>Falcons VS Jets</h3>
+                    <p>CURRENT SCORE: 14 - 14</p>
+                    <p>3RD Quarter 5:34</p>
                 </div>
                 <div class="ongoing_games content_card">
-                    <h3>TEAM 1 VS TEAM 2</h3>
-                    <p>CURRENT SCORE: X-X</p>
-                    <p>[Current phase of game, EG inning, period]</p>
+                    <h3>Oilers VS Wild</h3>
+                    <p>CURRENT SCORE: 2 - 1</p>
+                    <p>3rd Period 15:21</p>
                 </div> 
                 <div class="ongoing_games content_card">
-                    <h3>TEAM 1 VS TEAM 2</h3>
-                    <p>CURRENT SCORE: X-X</p>
-                    <p>[Current phase of game, EG inning, period]</p>
+                    <h3>Flames VS Jets</h3>
+                    <p>CURRENT SCORE: 3 - 1</p>
+                    <p>2nd Period 1:19</p>
                 </div> 
                 <div class="ongoing_games content_card">
-                    <h3>TEAM 1 VS TEAM 2</h3>
-                    <p>CURRENT SCORE: X-X</p>
-                    <p>[Current phase of game, EG inning, period]</p>
+                    <h3>Rams VS Panthers</h3>
+                    <p>CURRENT SCORE: 7 - 21</p>
+                    <p>2nd Quarter 13:34</p>
                 </div> 
                 <div class="ongoing_games content_card">
-                    <h3>TEAM 1 VS TEAM 2</h3>
-                    <p>CURRENT SCORE: X-X</p>
-                    <p>[Current phase of game, EG inning, period]</p>
+                    <h3>Arsenal VS Barcelona</h3>
+                    <p>CURRENT SCORE: 1-2</p>
+                    <p>1st Half 17:23</p>
                 </div> 
                 <div class="ongoing_games content_card">
-                    <h3>TEAM 1 VS TEAM 2</h3>
-                    <p>CURRENT SCORE: X-X</p>
-                    <p>[Current phase of game, EG inning, period]</p>
+                    <h3>Liverpool VS Madrid</h3>
+                    <p>CURRENT SCORE: 3 - 1</p>
+                    <p>2nd Half 4:23</p>
                 </div>
                 <div class="ongoing_games content_card">
-                    <h3>TEAM 1 VS TEAM 2</h3>
-                    <p>CURRENT SCORE: X-X</p>
-                    <p>[Current phase of game, EG inning, period]</p>
+                    <h3>Manchester VS Milan</h3>
+                    <p>CURRENT SCORE: 1 - 0</p>
+                    <p>2nd Half 16:32</p>
                 </div>   
                 <div class="ongoing_games content_card">
-                    <h3>TEAM 1 VS TEAM 2</h3>
-                    <p>CURRENT SCORE: X-X</p>
-                    <p>[Current phase of game, EG inning, period]</p>
+                    <h3>Cardinals vs Bills</h3>
+                    <p>CURRENT SCORE: 0 - 7</p>
+                    <p>2nd Quarter 3:12</p>
                 </div>   
                 <div class="ongoing_games content_card">
-                    <h3>TEAM 1 VS TEAM 2</h3>
-                    <p>CURRENT SCORE: X-X</p>
-                    <p>[Current phase of game, EG inning, period]</p>
+                    <h3>Golden Knights VS Ducks</h3>
+                    <p>CURRENT SCORE: 3-1</p>
+                    <p>2nd Period 15:22</p>
                 </div>           
             </div>
 
@@ -164,11 +164,11 @@
                 <!--FOOTER CONTACT SECTION-->
                 <footer id = "contact-footer">
                     <div id="footer_tel content_card">
-                        <h3><a href="tel:+15555555555">+1 (555) 555-5555</a></h3>
+                        <h3><a href="tel:+15555555555">+1 (250) 552-5258</a></h3>
                     </div>
 
                     <div id="footer_mail content_card">
-                        <h3><a href="mailto: placeholder@email.com">placeholder@email.com</a></h3>
+                        <h3><a href="mailto: placeholder@email.com">LeagueRadar@gmail.com</a></h3>
                     </div>
                     
                     <div id="footer_address content_card">
@@ -186,7 +186,7 @@
                     </div>
 
                     <div id = "footer_privacy content_card">
-                        <h3><a href="#PrivacyPolicy">Privacy</a></h3>
+                        <h3><a href="privacy.html">Privacy</a></h3>
                     </div>
                     <div id = "footer_version content_card">
                         <h3>Version 1.0</h3>
