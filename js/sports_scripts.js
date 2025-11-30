@@ -4,11 +4,11 @@ console.log(web_page);
 if(web_page.includes("soccer.html"))
 {
      const teamData = [
-        ["Arsenal", "https://loodibee.com/wp-content/uploads/premier-league-arsenal-fc-logo.png"],
-        ["Aston Villa", "https://loodibee.com/wp-content/uploads/premier-league-aston-villa-logo.png"],
-        ["Bournemouth", "https://loodibee.com/wp-content/uploads/premier-league-afc-bournemouth-logo.png"],
-        ["Brentford", "https://loodibee.com/wp-content/uploads/premier-league-brentford-fc-logo.png"],
-        ["Brighton", "https://loodibee.com/wp-content/uploads/premier-league-brighton-hove-albion-logo.png"]
+        ["Arsenal", "./images/arsenal.png"],
+        ["Barcelona", "./images/barcelona.png"],
+        ["Liverpool", "./images/liverpool.png"],
+        ["Madrid", "./images/madrid.png"],
+        ["Milan", "./images/milan.png"]
 
     ];
 
