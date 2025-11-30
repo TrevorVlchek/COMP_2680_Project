@@ -9,6 +9,66 @@ console.log(web_page);
 /* ---UNCOMMENT IF YOU WANT TO CLEAR ARRAY OF ACCOUNTS ---*/ 
 //localstorage.clear();
 
+
+//Sign in/up variable to hide and display when needed
+    var sign_in = document.getElementById("sign-in"); //change these to match index page
+    var sign_out = document.getElementById("sign-out");
+    var sign_up = document.getElementById("sign-up");
+    var seperator = document.getElementById("seperator");
+
+    var my_username = document.getElementById("username");
+    var my_email = document.getElementById("email");
+
+    var check_signed_in = 0;
+    check_signed_in = JSON.parse(localStorage.getItem("is_signed_in")); //Check the local storage to see if user has signed in yet
+    //Check if user was signed in last
+    if(check_signed_in === 1)//change to index.html for final release
+    {
+        setUser();
+        sign_out.style.visibility = "visible"; 
+        sign_in.style.visibility = "hidden";
+        sign_up.style.visibility = "hidden";
+        seperator.style.visibility = "hidden";
+    } 
+    else
+    {
+        sign_out.style.visibility = "hidden";
+        sign_in.style.visibility = "visible";
+        sign_up.style.visibility = "visible";
+        seperator.style.visibility = "visible";
+    }
+        
+
+
+
+    //Set username and email and display on index page
+    function setUser()
+    {
+        let user_account = JSON.parse(localStorage.getItem("user_account"));
+
+        my_username.innerHTML = "Username: " + user_account.username;
+        my_email.innerHTML = "Email: " + user_account.email;
+
+    }
+
+    //Sign Out
+    function signOut()
+    {
+        localStorage.removeItem("is_signed_in"); //Needed to remove so that the information doesnt display on startup even if we sign out and so no user data is lost
+
+        sign_in.style.visibility = "visible";//Display sign in input again
+        sign_up.style.visibility = "visible";//Display sign up input again
+        seperator.style.visibility = "visible";
+        sign_out.style.visibility = "hidden";
+
+        let my_username = document.getElementById("username");
+        let my_email = document.getElementById("email");
+
+        my_username.innerHTML = "";
+        my_email.innerHTML = "";
+    }
+
+    
 /*-------SPORTS.HTML SCRIPTS-----*/
 if(web_page.includes("team.html")) //TODO: Check if this still works 
 {

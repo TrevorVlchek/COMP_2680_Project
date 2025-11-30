@@ -1,3 +1,0 @@
-implementation is basically done but a little ugly
-Feel free to test out and try to find bugs
-Still need to add function to check existing emails and usernames before creating an account
