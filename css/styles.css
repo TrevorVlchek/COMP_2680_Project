@@ -28,8 +28,15 @@ div#container
     margin: 0.2rem;
 }
 
+header {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 header h1 {
     font-size: 3rem;
+    background: -webkit-linear-gradient(darkred, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0.1rem black;
     background-color: rgba(36, 145, 203, 0.5);
 }
@@ -244,4 +251,20 @@ h2 {
     color: white;
     padding: 0.5rem;
     border: 0.1rem solid white;
+}
+
+footer a:link{
+    color: red;
+}
+
+footer a:visited{
+    color: white;
+}
+
+footer a:hover{
+    color: darkblue;
+}
+
+footer a:active{
+    color: aqua;    
 }
